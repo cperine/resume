@@ -1,0 +1,272 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2007-2010 Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
+%
+% This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+
+\usepackage[empty]{fullpage}
+\usepackage{color}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\definecolor{mygrey}{gray}{0.90}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\pagestyle{fancy}
+
+% Adjust margins to 0.5in on all sides
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+\fancyhf{}
+\fancyheadoffset{\textwidth}
+
+%-----------------------------------------------------------
+
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand{\respap}[2]{
+\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+		#1 \\
+		#2 \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand{\respres}[2]{
+\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+		\textit{#1} & #2 \\
+\end{tabular*}\vspace{-6pt}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+%-----------------------------------------------------------
+%Conditional defines
+
+\newif\ifobjective
+\newif\ifsandia
+\newif\ificstraining
+\newif\ifics
+\newif\ifpapers
+\newif\ifpersentations
+
+\objectivefalse
+\sandiafalse
+\icstrainingfalse
+\icsfalse
+\papersfalse
+\persentationsfalse
+
+%-----------------------------------------------------------
+
+\author{Charles Perine}
+\title{Resume of Charles Perine}
+\begin{document}
+	\lfoot{Charles Perine}
+%	
+%	I typically put my phone number in the cfoot section when submitting
+%
+%	\cfoot{123.555.1212} % Redacted so I don't get spam
+%
+	\cfoot{}
+%	
+%	I typically put my email address in the rfoot section when submitting
+%
+%	\rfoot{email@address.com} % Redacted so I don't get spam
+%
+	\rfoot{https://charlesperine.com}
+
+%	
+%	This is my normal configuration with my phone number and email address in the heading
+%
+%	\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+%		\textbf{\LARGE First Name} & 123.555.1212\\
+%		City, State & email@address.com\\
+%	\end{tabular*}\vspace{0.1in}
+%
+
+	\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{\LARGE Charles Perine} & https://charlesperine.com\\
+		Boise, ID & https://www.linkedin.com/in/charlesperine\\
+	\end{tabular*}\vspace{0.1in}
+%
+%	If you want an objective, fill out below and change \objectivefalse to \objectivetrue
+%	in the Conditional defines section starting at line 56
+%
+\ifobjective
+	\resheading{OBJECTIVE}
+	\begin{description}
+		\item
+		% Add objective here
+		\item
+		% Add objective here
+		\item
+		% Add objective here
+	\end{description}
+\fi
+	\resheading{SKILLSET}
+	\begin{multicols}{3}
+		\begin{itemize}
+			\item Security Research
+			\item Network Security
+			\item Computer Security
+			\item Application Security
+			\item Penetration Testing
+			\item Reverse Engineering
+			\item Red Teaming
+			\item Embedded System Security
+			\item Control System Security
+			%\item PSIRT
+			%\item[] % blank item
+		\end{itemize}
+	\end{multicols}
+	\resheading{WORK EXPERIENCE}
+	\begin{itemize}
+	\item
+		\ressubheading{Trend Micro}{Irving, TX}{Threat Researcher}{Oct 2018 - Feb 2024}
+		\begin{itemize}
+			\resitem{Led multiple research projects, managing time-lines, research direction, and team coordination}			
+			\resitem{Conducted security assessments, uncovering vulnerabilities in multiple devices and notifying ZDI}
+			\resitem{Developed a method to identify customers of cloud services}
+			\resitem{Built, maintained, and monitored hyper-realistic factory honeypots, establishing a fictitious company to enhance realism and capture cyber threats}
+			\resitem{Collaborated on several research projects, leading to the creation of white papers, blog content, conference presentations, and media coverage}
+			\resitem{Tested Databricks and Retrieval-Augmented Generation (RAG) technologies to support a research project, optimizing data processing and information retrieval}
+		\end{itemize}	
+	\item
+		\ressubheading{Revolutionary Security}{Blue Bell, PA}{Senior Security Consultant}{Oct 2017 - Sept 2018}
+		\begin{itemize}
+			\resitem{Performed programmatic and technical threat model for product development organizations}			
+			\resitem{Managed and executed pentesting and vulnerability assessments to evaluate and enhance the security of both corporate networks and industrial control systems}
+			\resitem{Executed vulnerability assessment of sub-GHz radio networks and hardware}
+		\end{itemize}
+	\item
+		\ressubheading{Leidos (formerly Lockheed Martin - IS\&GS)}{Valley Forge, PA}{Information Assurance Engineer}{Oct 2012 - Oct 2017}
+		\begin{itemize}
+			\resitem{Led pentesting engagements and vulnerability assessments to verify the security of corporate, industrial control, point of sale and Internet service provider systems}
+			\resitem{Mentored junior consultants in industrial control system assessment methodologies}
+			\resitem{Discovered multiple 0day vulnerabilities in industrial control systems}
+			\resitem{Communicated complex technical details effectively to C-level management}
+			%\resitem{Developed content for new and existing client offerings}
+		\end{itemize}
+	\item
+		\ressubheading{General Electric}{Van Buren Township, MI}{Lead Analyst - Security Assessments}{Mar 2011 - Oct 2012}
+		\begin{itemize}
+			\resitem{Performed software and hardware security assessments for intra-company organizations}
+			\resitem{Led root-cause analysis investigations in response to product security incidents}
+			\resitem{Directed small, agile, global assessment teams} 
+			\resitem{Trained analysts in fuzzing, reversing, and exploitation of control and embedded systems}
+			%\resitem{Developed and implemented a detailed process for standardizing embedded system assessments}
+			%\resitem{Created custom tools to automate and simplify intricate assessment processes} 
+		\end{itemize}
+	\item
+		\ressubheading{Digital Bond, Inc.}{Sunrise, FL}{Security Consultant}{Jan 2008 - Mar 2011}
+		\begin{itemize}
+			\resitem{Performed security assessments of Industrial Control Systems, Smart Grid, and Corporate Networks}
+			\resitem{Generated custom Meterpreter scripts for complex ICS attacks}
+			\resitem{Produced and instructed a protocol fuzzing, exploitation development, and firmware analysis curriculum}
+			%\resitem{Designed a Snort preprocessor for the OPC UA protocol}
+			%\resitem{Directed the conversion of a Historian System into a Real-Time Event Monitoring Environment}
+		\end{itemize}
+	\ifsandia
+		\end{itemize}
+		\pagebreak
+		\resheading{WORK EXPERIENCE CONTINUED}
+		\begin{itemize}
+		\item
+			\ressubheading{Sandia National Laboratories}{Livermore, CA}{Computer and Network Security Analyst}{Feb 2007 - Jun 2007}
+			\begin{itemize}
+				\resitem{Analyzed and correlated network traffic with IDS alerts}
+				\resitem{Performed research on network monitoring, network obfuscation techniques, and malware propagation}
+				\resitem{Led security evaluations on embedded collaboration devices}
+				\resitem{Contributed to the design and development of a security platform for SCADA protection (OPSAID)}
+			\end{itemize}
+		\item
+			\ressubheading{Sandia National Laboratories}{Livermore, CA}{Computer and Network Security Intern}{Nov 2004 - Feb 2007}
+			\begin{itemize}
+				\resitem{Led and managed the open source release of NetState (a unique network monitoring system)}
+				\resitem{Developed and administrated an attack and defense simulation network for forensic analysis}
+				\resitem{Performed security evaluations of various architectures, providing detailed remediation plans and recommendations}
+			\end{itemize}
+	\fi
+	\end{itemize}
+	\resheading{TECHNICAL EXPERIENCE}
+		\begin{itemize}
+    		\item 10+ years experience with *nix based operating systems
+			\item 10+ years experience with Industrial Control System security
+			%\item 10+ years experience installing, configuring and maintaining computer networks
+			\item 5+ years security research		    	
+			\item Familiar with the following programming languages: C/C++, IA32, Perl, Python, SQL, Shell scripting
+		\end{itemize}	
+ 	\resheading{EDUCATION}
+	\begin{itemize}
+		\item
+		\ressubheading{California State University - Hayward}{Hayward, CA}{Bachelor of Science in Computer Science}{Aug 2004 - Aug 2006}
+		\item
+		\ressubheading{Las Positas College}{Livermore, CA}{Associate of Science in Computer Science}{Sep 2001 - Aug 2004}
+		\item
+		\ressubheading{REcon - Philippe Langlois}{Montreal, ON}{Mobile and Telecom Applied Hacking and Reverse Engineering}{Jun 2016}
+		\item
+		\ressubheading{REcon - Joe Grand}{Montreal, ON}{Hardware Hacking}{Jun 2015}
+		\item
+		\ressubheading{REcon - Saumil Shah}{Montreal, ON}{Exploit Laboratory}{Jun 2014}
+		\item
+		\ressubheading{Immunity, Inc.}{Miami, FL}{Unethical Hacking}{Nov 2008}
+		\item
+		\ressubheading{SANS}{Monterey, CA}{SEC 503: Intrusion Detection In-Depth}{May 2007}
+		\ificstraining
+			\item
+			\ressubheading{Falck}{Houma, LA}{BOSIET: Basic Offshore Safety Induction and Emergency Training - Expired}{Aug 2015}
+		\fi
+	\end{itemize}
+%
+%	If you want to add a papers section, fill out below and change \papersfalse to \paperstrue
+%	in the Conditional defines section starting at line 56
+%
+	\ifpapers
+	 	\resheading{Papers}
+		\begin{itemize}
+			\item "A Survey of Cloud-Based GPU Threats and Their Impact on AI, HPC, and Cloud Computing" Trend Micro, Mar 2024
+			\item "Distributed Energy Generation Gateway (In)Security" Trend Micro, Jan 2024
+			\item "MQTT and M2M: Do You Know Who Owns Your Machine’s Data?" Trend Micro, Oct 2023
+			\item "Examining Security Risks in Logistics APIs Used by Online Shopping Platforms" Trend Micro, Sep 2022
+			\item "Attacks From 4G/5G Core Networks: Risks of the Industrial IoT in Compromised Campus Networks" Trend Micro, Sep 2020
+			\item "Lost in translation: when industrial protocol translation goes wrong" Trend Micro, Aug 2020
+			\item "Caught in the act: Running a realistic factory honeypot to capture real threats" Trend Micro, Jan 2020
+			\ifics
+				\item "Threat Modeling NetDDE Vulnerabilities in Control Systems" Digital Bond, Jan 2008
+			\fi
+		\end{itemize}
+	\fi
+%
+%	If you want to add a presentation section, fill out below and change \persentationsfalse to \persentationstrue
+%	in the Conditional defines section starting at line 56
+%
+	\ifpersentations
+	 	\resheading{Presentations}
+		\begin{itemize}
+			\item
+			\respres{Attacks From the 4G/5G Core}{S4 2022}
+			\item
+			\respres{Faking a Factory: Creating and Operating a Realistic Honeypot}{Blackhat Asia 2020}
+			\item 
+			\respres{Good to Bad: When Industrial Protocol Translation Goes Wrong}{Critis 2020}
+			\ifics	
+				\item
+				\respres{Threat Modeling NetDDE Vulnerabilities in Control Systems}{S4 2008}
+			\fi
+		\end{itemize}
+	\fi
+\end{document}
+
